@@ -23,6 +23,12 @@
         <input type="email" placeholder ="Email" name="email">
         <input type="submit">
     </form>
+       <script>
+  var email = document.querySelector('[name="email"]').value;
+  analytics.identify(email, {
+    "email": email
+  });
+</script>
     
    </body>
 </html>
