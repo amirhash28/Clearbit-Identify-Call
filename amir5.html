@@ -29,10 +29,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     event.preventDefault();
   });
   //Step 2: Grab the email that was submitted
-  let emailSubmit = form.querySelector("input[type='email']").value;
+  let email = form.querySelector("input[type='email']").value;
    //Step 3: Send to Clearbit
   clearbit.identify(email, {
-    email: emailSubmit,
+    email: email,
   });
 </script>
 
