@@ -22,6 +22,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <input type="email" name="email" id="email" value />
   <button>Submit</button>
 </form>
+<script>
+  
+  let form = document.querySelector("form");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+  
+  let email = form.querySelector("input[type='email']").value;
+  
+  clearbit.identify(email, {
+    email: email,
+  });
+</script>
 
         
     </body>
