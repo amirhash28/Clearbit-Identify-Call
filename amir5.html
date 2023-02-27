@@ -23,14 +23,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <button>Submit</button>
 </form>
 <script>
-  
+  //Step 1: Listen to the form submission
   let form = document.querySelector("form");
   form.addEventListener("submit", (event) => {
     event.preventDefault();
   });
-  
+  //Step 2: Grab the email that was submitted
   let email = form.querySelector("input[type='email']").value;
-  
+   //Step 3: Send to Clearbit
   clearbit.identify(email, {
     email: email,
   });
